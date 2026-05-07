@@ -11,7 +11,7 @@
     {% endblock %}
     <!-- 🔝 HEADER -->
     <header>
-        <div class="logo">FocusGallery</div>
+        <div class="logo"><a href="{{path('app_photo')}}">FocusGallery</a></div>
         <nav>
              {% if is_granted('ROLE_ADMIN') %}
                             <li class="nav-item">

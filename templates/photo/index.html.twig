@@ -1,15 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PhotoController!{% endblock %}
+{% block title %}FocusGallery{% endblock %}
 
 {% block body %}
-<!-- 🎯 FILTRES -->
+<!-- FILTRES -->
 <div class="filters">
-{% for category in categories %}
+    <a href="{{ path('app_photo') }}" 
+       class="btn {{ currentCategory is null ? 'active' : '' }}"
+       style="background-color: darkgrey; color: whitesmoke">
+        Tous
+    </a>
 
-<a href="" style="background-color: {{ category.color }}; color : whitesmoke" class="btn">{{category.name}}</a>
-
-{% endfor %}
+    {% for category in categories %}
+    <a href="{{ path('app_photo', {category: category.id}) }}" 
+       style="background-color: {{ category.color }}; color: whitesmoke" 
+       class="btn {{ currentCategory == category.id ? 'active' : '' }}">
+        {{ category.name }}
+    </a>
+    {% endfor %}
 </div>
 
 <div class="gallery">
