@@ -1,0 +1,260 @@
+/* 🌐 RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* 🔝 HEADER */
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+header nav a:hover {
+    opacity: 1;
+}
+
+/* 🌍 LANGUE */
+.lang {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* 🧾 TITRE */
+h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 32px;
+}
+
+/* 🎯 FILTRES (boutons catégories) */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    transform: scale(1.05);
+}
+
+.filters .active {
+    background: #ff5c5c;
+    color: white;
+}
+
+/* 🖼️ GRID GALERIE */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 40px 40px;
+}
+
+/* 📦 CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🖼️ IMAGE */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* 📝 CONTENU */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 🏷️ TAG CATÉGORIE */
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 12px;
+    background: #eee;
+}
+
+/* 🎨 TAG COLORS EXEMPLE */
+.tag.paysage {
+    background: #4db6ff;
+    color: white;
+}
+
+.tag.portrait {
+    background: #ff5c5c;
+    color: white;
+}
+
+.tag.urbain {
+    background: #444;
+    color: white;
+}
+
+.tag.animalier {
+    background: #6a5acd;
+    color: white;
+}
+
+.tag.macro {
+    background: #7cb342;
+    color: white;
+}
+
+/* 👁️ BOUTON VOIR */
+.btn {
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #f0f0f0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+/*Page Show*/
+.show {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.image-card {
+    width: 460px;
+    height: 630px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    background: #000;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1));
+}
+
+.info-card {
+    width: 340px;
+    background: white;
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 14px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    width: fit-content;
+    color: whitesmoke;
+}
+.back-button{
+    background-color: rgb(193, 193, 193);
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 150  px;
+}

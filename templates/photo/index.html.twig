@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PhotoController!{% endblock %}
+
+{% block body %}
+<!-- 🎯 FILTRES -->
+<div class="filters">
+{% for category in categories %}
+
+<a href="" style="background-color: {{ category.color }}; color : whitesmoke" class="btn">{{category.name}}</a>
+
+{% endfor %}
+</div>
+
+<div class="gallery">
+
+    {% for photo in photos %}
+    <div class="card">
+
+        <img src="/uploads/photo/{{ photo.imageName }}" alt="{{ photo.title }}">
+
+        <div class="card-content">
+            <h3>{{ photo.title }}</h3>
+
+            <div class="card-footer">
+                {% if photo.category %}
+                <span class="tag" style="background-color: {{ photo.category.color }}">
+                    {{ photo.category.name }}
+                </span>
+                {% endif %}
+
+                <a href="{{path('app_show',{id:photo.id})}}" class="btn">Voir</a>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

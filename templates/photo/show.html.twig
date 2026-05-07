@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="show">
+  <div class="container">
+
+    <div class="image-card">
+      <img src="/uploads/photo/{{photo.imageName}}" alt="{{ photo.title }}">
+      <div class="overlay"></div>
+    </div>
+
+    <div class="info-card">
+      <h1 class="title">{{photo.title}}</h1>
+
+      <div class="tag" style="background-color: {{ photo.category.color }}" >
+        <span class="dot" >{{photo.category.name}}</span>
+      </div>
+
+      <p class="description">
+       {{photo.description}}
+      </p>
+
+      <a href="{{path('app_photo')}}" class="back-button">
+        ← Retour à galerie
+      </a>
+    </div>
+
+  </div>
+</div>
+{% endblock body %}
